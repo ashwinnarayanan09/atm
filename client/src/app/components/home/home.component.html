@@ -1,0 +1,53 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-3">ATM</h1>
+    <p>This is an ATM simulator application.</p>
+
+  </div>
+</div>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-row">
+        <label>Please enter amount in multiples of 100</label>
+      </div>
+      <div class="form-row">
+        <label>Denominations available -> 100 kr & 500 kr</label>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <input class="form-control" type="number"  [(ngModel)]="amount" name="depositAmount">
+        </div>
+        <div class="form-group col-md-4">
+          <button class="btn btn-primary" (click)="deposit()" [disabled]="disableDeposit()">Deposit</button>
+        </div>
+        <div class="form-group col-md-4">
+          <button class="btn btn-success" (click)="withdraw()" [disabled]="disableWithdraw()">Withdraw</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<br>
+
+  <div class="row">
+    <div class="col-md-4">
+      <label>{{message}}</label>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <label>Available Balance:</label>
+      <div>{{balance}}</div>
+    </div>
+
+  </div>
+
+</div> <!-- /container -->
+
